@@ -1,0 +1,74 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["custom/clock", "custom/language", "network", "group/volume"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["battery", "custom/reboot", "custom/poweroff"],
+
+    "custom/clock": {
+	"format": "{}",
+	"exec": "date +\"%I:%M %p %a %Y\" | tr '[:lower:]' '[:upper:]'",
+	"interval": 1
+    },
+
+    "custom/language": {
+	"exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | awk -F '\"' '{print toupper(substr($4,1,2))}'",
+	"interval": 1
+    },
+
+    "sway/workspaces": {
+	"format": "—",
+	"disable-click": true
+    },
+
+    "network": {
+	"format-wifi": "{icon}",
+	"format-ethernet": "󰈀",
+	"format-disconnected": "󰤭",
+	"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+	"interval": 10
+    },
+
+    "group/volume": {
+	"orientation": "horizontal",
+	"drawer": {
+	    "transition-duration": 500,
+	    "transition-left-to-right": true
+	},
+	"modules": ["pulseaudio", "pulseaudio/slider"]
+    },
+
+    "pulseaudio/slider": {
+	"min": 0,
+	"max": 100,
+	"orientation": "horizontal"
+    },
+
+    "pulseaudio": {
+	"format": "{icon}",
+	"format-bluetooth": "󰂯",
+	"format-muted": "󰝟",
+	"scroll-step": 1,
+	"on-click": "pavucontrol",
+	"ignored-sinks": ["Easy Effects Sink"],
+	"format-icons": {
+	    "default": ["", "", ""]
+	},
+	"tooltip-format": "Volume: {volume}%"
+    },
+
+    "battery": {
+	"format": "{capacity}% {icon}",
+	"format-icons": ["", "", "", "", ""],
+    },
+
+    "custom/reboot": {
+	"on-click": "systemctl reboot",
+	"format": "󰜉"
+    },
+
+    "custom/poweroff": {
+	"on-click": "systemctl poweroff",
+	"format": "󰐥"
+    }
+}

@@ -1,0 +1,16 @@
+background = 171726
+foreground = FFFFFF
+selection-background = FFFFFF
+selection-foreground = 512A77
+
+font-size = 14
+
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+window-padding-color = background
+
+mouse-hide-while-typing = true
+focus-follows-mouse = true
+clipboard-read = allow
+clipboard-write = allow
