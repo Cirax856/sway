@@ -1,5 +1,6 @@
 # Sway
 This is my custom-made configuration for the Sway WM for Arch Linux. This repo contains all my dotfiles, the wallpaper, and also the full install script that installs everything for you, even my most-used apps. Please create an issue on this repo if you get any issues or errors with the installation, or if you'd appreciate any other custom app styling! **(Installation steps at the bottom)**
+NOTE: The script has not been tested, only use on a brand new system as it may break an already setup one.
 
 ![screenshot](./screenshot.png)
 
