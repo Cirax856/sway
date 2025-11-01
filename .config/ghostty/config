@@ -1,9 +1,6 @@
-background = 171726
-foreground = FFFFFF
-selection-background = FFFFFF
-selection-foreground = 512A77
-
 font-size = 14
+
+theme = cirax
 
 window-padding-x = 10
 window-padding-y = 10
