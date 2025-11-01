@@ -9,7 +9,7 @@ while true; do sudo -n true; sleep 60; done 2>/dev/null &
 KEEP_SUDO_ALIVE=$!
 
 # sync and upgrade all packages and install apps
-sudo pacman -Syyu --noconfirm ghostty firefox nvim waybar ttf-jetbrains-mono-nerd pipewire-pulse dolphin unzip
+sudo pacman -Syyu --noconfirm ghostty firefox nvim waybar ttf-jetbrains-mono-nerd pipewire-pulse dolphin unzip wofi
 
 # install yay
 TMP_DIR=$(mktemp -d)
@@ -30,7 +30,6 @@ git clone --depth=1 https://github.com/Cirax856/sway.git "$TMP_DIR"
 
 mkdir -p "$HOME/.config"
 cp -r "$TMP_DIR/.config/"* "$HOME/.config/"
-cp -r "$TMP_DIR/wallpaper.png" "$HOME/.config/sway/wallpaper.png"
 cp -r "$TMP_DIR/.bashrc" "$HOME/.bashrc"
 
 # clean up and finish
