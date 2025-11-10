@@ -5,7 +5,10 @@ if [ "$EUID" -eq 0 ]; then
 fi
 
 sudo -v
-while true; do sudo -n true; sleep 60; done 2>/dev/null &
+while true; do
+  sudo -n true
+  sleep 60
+done 2>/dev/null &
 KEEP_SUDO_ALIVE=$!
 
 # sync and upgrade all packages and install apps
@@ -21,7 +24,7 @@ cd ~
 rm -rf "$TMP_DIR"
 
 # install AUR apps
-yes | yay -S --answerclean Yes --answerdiff None vesktop 
+yes | yay -S --answerclean Yes --answerdiff None vesktop
 
 # install .config files and other files from repo
 TMP_DIR=$(mktemp -d)

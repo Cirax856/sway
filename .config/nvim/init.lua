@@ -1,4 +1,7 @@
-require("cirax")
+require("config.lazy")
+require("config.remap")
+require("config.colors")
+require("lazy").setup("plugins")
 
 vim.opt.number = true
 
