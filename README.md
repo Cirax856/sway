@@ -4,6 +4,11 @@ NOTE: The script has not been tested, only use on a brand new system as it may b
 
 ![screenshot](./screenshot.png)
 
+# Color scheme
+I made this color scheme, I'm proud of it, check it out:
+
+![color scheme](./color schene.png)
+
 # Customizations
 This configuration contains a wallpaper, customized waybar and dotfiles for apps found below.
 
