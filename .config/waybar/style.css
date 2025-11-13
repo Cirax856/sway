@@ -19,7 +19,7 @@ window#waybar {
 
 #custom-clock,
 #custom-language,
-#network.disabled, #network.wifi, #network.ethernet, #network.disconnected,
+#network.disabled, #network.wifi, #network.ethernet, #network.disconnected, #network.linked,
 #volume {
     padding: 6px 0 6px 20px;
     color: @primary;
@@ -90,5 +90,5 @@ window#waybar {
 }
 
 #battery.charging {
-    color: #2aa258;
+    color: #23F0C7;
 }
